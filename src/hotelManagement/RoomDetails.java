@@ -69,8 +69,9 @@ public void actionPerformed(ActionEvent e) {
 						index++;
 						for( i = 0; i < data.length; i++){
 							if(data[i] != null){ // object is not null
-								System.out.println(data[i]);
+								JOptionPane.showMessageDialog(null, data[i]);
 							}
+							
 						}
 						
 					}
@@ -81,6 +82,8 @@ public void actionPerformed(ActionEvent e) {
 				JOptionPane.showMessageDialog(null, e1.getMessage());
 			}
 			
+			
+		
 			
 		
 			
