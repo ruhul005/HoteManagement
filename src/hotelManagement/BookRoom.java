@@ -73,7 +73,7 @@ public void actionPerformed(ActionEvent e) {
 			String roomF = getRoom().getSelectedItem().toString();
 			String daysToRentF= daysToRent.getText();
 			double days = Double.parseDouble(daysToRentF);
-			double tottalCost= days*600;
+			double totalCost= days*600;
 			//write Info to file in append Mode
 			
 			try {
@@ -86,6 +86,7 @@ public void actionPerformed(ActionEvent e) {
 				fw.write(phoneF+"\n");
 				fw.write(roomF+" \n");
 				fw.write(daysToRentF+"\n");
+				fw.write(totalCost+"\n");
 				
 				JOptionPane.showMessageDialog(null, "data Added\n Name:"+nameF+"\nNID:"+nidF+
 						"\nAddress:"+addressF+"\nPhone:"+phoneF+"\nRoom No:"+roomF+"\n Rented for"+daysToRentF+"days");
