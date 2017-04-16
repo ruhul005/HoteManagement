@@ -74,7 +74,8 @@ public class Person{
 	}
 
 	public String toString(){
-		return nameF + ", " + nidF + ", " + addressF+","+phoneF+","+roomF+","+daysToRentF+","+","+totalCoastF;
+		//return nameF + ", " + nidF + ", " + addressF+","+phoneF+","+roomF+","+daysToRentF+","+","+totalCoastF;
+		return "Person [nammeF+nidF+address+phoneF+roomF+daysToRent+totalcost]";
 	}
 }
 

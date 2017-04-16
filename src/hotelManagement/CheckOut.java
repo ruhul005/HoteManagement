@@ -44,7 +44,7 @@ public class CheckOut extends Frame implements ActionListener{
 				{
 					for(int i=0;i<=f.length();i++)
 					{
-						if(room==201)
+						if(room==200+i)
 						{
 							
 						}

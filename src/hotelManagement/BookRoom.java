@@ -84,9 +84,11 @@ public void actionPerformed(ActionEvent e) {
 				fw.write(nidF+"\n");
 				fw.write(addressF+"\n");
 				fw.write(phoneF+"\n");
-				fw.write(roomF+" \n");
+				fw.write(roomF+"\n");
 				fw.write(daysToRentF+"\n");
 				fw.write(totalCost+"\n");
+				//fw.write("Customer Detail \n");
+				
 				
 				JOptionPane.showMessageDialog(null, "data Added\n Name:"+nameF+"\nNID:"+nidF+
 						"\nAddress:"+addressF+"\nPhone:"+phoneF+"\nRoom No:"+roomF+"\n Rented for"+daysToRentF+"days");

@@ -52,31 +52,52 @@ public void actionPerformed(ActionEvent e) {
 					
 					
 					
-					for(int i=0; i < data.length ;i++)
-					{
-						String nameF=x.nextLine();
-						String nidF=x.nextLine();
-						String addressF=x.nextLine();
-						String phoneF=x.nextLine();
-						String room=x.nextLine();
-						String daysToRent=x.nextLine();
-						String costF=x.nextLine();
-						Double tottalCost= Double.parseDouble(costF);
+					for(int i=0; i <1 ;i++)
+					{	
 						
-						Person temp = new Person(nameF,nidF,addressF,phoneF,room,daysToRent,tottalCost);
-						persons[i] = temp;
-						data[index] = temp;
-						index++;
-						for( i = 0; i < data.length; i++){
-							if(data[i] != null){ // object is not null
-								JOptionPane.showMessageDialog(null, data[i]);
+						String nameF=x.nextLine();
+
+						String nidF=x.nextLine();
+						
+						String addressF=x.nextLine();
+						//JOptionPane.showMessageDialog(null, "Address readen");
+						String phoneF=x.nextLine();
+						//JOptionPane.showMessageDialog(null, "Phone readen");
+						String room=x.nextLine();
+						
+						
+						//JOptionPane.showMessageDialog(null, "room readen");
+						String daysToRentF=x.nextLine();
+						//JOptionPane.showMessageDialog(null, "days readen");
+						String costF=x.nextLine();
+						
+						//JOptionPane.showMessageDialog(null, "all data readen");
+						if(room.equals(roomF))
+							
+						{
+							JOptionPane.showMessageDialog(null, "in IF condition");
+							JOptionPane.showMessageDialog(null, "data readen \n Name:"+nameF+"\nNID:"+nidF+
+									"\nAddress:"+addressF+"\nPhone:"+phoneF+"\nRoom No:"+roomF+"\n Rented for"+daysToRentF+"days");
+						}
+						
+						
+						
+						//JOptionPane.showMessageDialog(null, nameF);
+						
+						//Person temp = new Person(nameF,nidF,addressF,phoneF,room,daysToRent,tottalCost);
+						//persons[i] = temp;
+						//data[index] = temp;
+						//index++;
+						//for( i = 0; i < data.length; i++){
+							//if(data[i] != null){ // object is not null
+								//JOptionPane.showMessageDialog(null, data[i]);
 							}
 							
 						}
 						
-					}
+					//}
 					
-				}
+				//}
 			}catch (Exception e1) {
 				//System.out.println(e1.getMessage());
 				JOptionPane.showMessageDialog(null, e1.getMessage());
