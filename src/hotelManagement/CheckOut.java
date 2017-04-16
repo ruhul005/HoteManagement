@@ -55,7 +55,7 @@ public class CheckOut extends Frame implements ActionListener{
 				String[] costF= new String[10];
 		while(x.hasNextLine()==true)
 				{
-					for(int i=0;i<persons.length;i++)
+					for(int i=0;i<10;i++)
 					{
 						 nameF[i]=x.nextLine();
 
@@ -73,35 +73,45 @@ public class CheckOut extends Frame implements ActionListener{
 							JOptionPane.showMessageDialog(null, "data Readen");
 							//JOptionPane.showMessageDialog(null, "data readen \n Name:"+nameF[i]+"\nNID:"+nidF[i]+
 									//"\nAddress:"+addressF[i]+"\nPhone:"+phoneF[i]+"\nRoom No:"+room[i]+"\n Rented for"+daysTorentF[i]+"days");
-						//}
+						//}			
+							if(x.hasNextLine()==false) {
+								FileWriter fw = new FileWriter("data.txt",false );
+								for ( i=0;i<10;i++)
+								{
+									
+									
+									if(roomF.equals(room)) {
+										JOptionPane.showMessageDialog(null, "Skipped");
+										continue;}
+									
+									fw.write(nameF+"\n");
+									fw.write(nameF[i]+"\n");
+									JOptionPane.showMessageDialog(null, "name written");
+									fw.write(nidF[i]+"\n");
+									fw.write(addressF[i]+"\n");
+									fw.write(phoneF[i]+"\n");
+									fw.write(room[i]+"\n");
+									fw.write(daysTorentF[i]+"\n");
+									fw.write(costF[i]+"\n");
+									JOptionPane.showMessageDialog(null, "data Written Again");
+									JOptionPane.showMessageDialog(null, "data Written \n Name:"+nameF[i]+"\nNID:"+nidF[i]+
+											"\nAddress:"+addressF[i]+"\nPhone:"+phoneF[i]+"\nRoom No:"+room[i]+"\n Rented for"+daysTorentF[i]+"days");
+									
 							
-								
+						}
+								fw.close();
+								if(x.hasNextLine()==true)
+									new Menu();
+									
+									
+								}
 				}
+					
 
-					for (int i=0;i<persons.length;i++)
-					{
-						FileWriter fw = new FileWriter("data.txt",false );
-						
-						if(roomF.equals(room)) {
-							continue;}
-						
-						
-						fw.write(nameF[i]+"\n");
-						JOptionPane.showMessageDialog(null, "name written");
-						fw.write(nidF[i]+"\n");
-						fw.write(addressF[i]+"\n");
-						fw.write(phoneF[i]+"\n");
-						fw.write(room[i]+"\n");
-						fw.write(daysTorentF[i]+"\n");
-						fw.write(costF[i]+"\n");
-						JOptionPane.showMessageDialog(null, "data Written Again");
-						JOptionPane.showMessageDialog(null, "data readen \n Name:"+nameF[i]+"\nNID:"+nidF[i]+
-								"\nAddress:"+addressF[i]+"\nPhone:"+phoneF[i]+"\nRoom No:"+room[i]+"\n Rented for"+daysTorentF[i]+"days");
-						
-				
-			}
 					
 				}
+		
+	
 				}catch (Exception e1) {
 				//System.out.println(e1.getMessage());
 				JOptionPane.showMessageDialog(null,e1.getMessage());
