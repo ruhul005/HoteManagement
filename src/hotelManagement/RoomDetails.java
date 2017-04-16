@@ -45,7 +45,7 @@ public void actionPerformed(ActionEvent e) {
 				String roomF = getRoom().getSelectedItem().toString();
 				
 				//int room = Integer.parseInt(roomF);
-				Person [] data = new Person [30];
+				//Person [] data = new Person [30];
 				
 				
 				while(x.hasNextLine()){
@@ -80,27 +80,13 @@ public void actionPerformed(ActionEvent e) {
 									"\nAddress:"+addressF+"\nPhone:"+phoneF+"\nRoom No:"+roomF+"\n Rented for"+daysToRentF+"days");
 						}
 						
-						
-						
-						
 							}
 							
 						}
-						
-				
-					
-				
-			}catch (Exception e1) {
+					}catch (Exception e1) {
 
 				JOptionPane.showMessageDialog(null, e1.getMessage());
 			}
-			
-			
-		
-			
-		
-			
-			
 			getFrame().setVisible(true);
 			//JOptionPane.showMessageDialog(null, "Mr X booked this room for 3 days \nHis Phone:\nHis Address");
 

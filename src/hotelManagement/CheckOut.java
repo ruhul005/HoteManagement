@@ -35,21 +35,35 @@ public class CheckOut extends Frame implements ActionListener{
 		if(e.getSource()==getSubmit())
 		{
 			try {
-				File f = new File("data.txt");
-				Scanner x = new Scanner(f);
+				File fr = new File("data.txt");
+				Scanner x = new Scanner(fr);
+				Scanner s = new Scanner(System.in);
 				String roomF = getRoom().getSelectedItem().toString();
-				int room = Integer.parseInt(roomF );
+				
 				
 				while(x.hasNextLine())
 				{
-					for(int i=0;i<=f.length();i++)
+					for(int i=0;i<1;i++)
 					{
-						if(room==200+i)
-						{
+						String nameF=x.nextLine();
+
+						String nidF=x.nextLine();
+						String addressF=x.nextLine();
+						String phoneF=x.nextLine();
+						String room=x.nextLine();
+						String daysToRentF=x.nextLine();
+						String costF=x.nextLine();
+						
+						if(room.equals(roomF))
 							
+						{
+							JOptionPane.showMessageDialog(null, "in IF condition");
+							JOptionPane.showMessageDialog(null, "data readen \n Name:"+nameF+"\nNID:"+nidF+
+									"\nAddress:"+addressF+"\nPhone:"+phoneF+"\nRoom No:"+roomF+"\n Rented for"+daysToRentF+"days");
 						}
+						
 					}
-					JOptionPane.showMessageDialog(null, roomF);
+					//JOptionPane.showMessageDialog(null, roomF);
 				}
 				
 				
