@@ -36,9 +36,9 @@ public void actionPerformed(ActionEvent e) {
 			try {
 				File fr = new File("data.txt");
 				Scanner x = new Scanner(fr);
-				int index = 0;
+
 				
-				Person [] persons = new Person[10];
+
 				Scanner s = new Scanner(System.in);
 				
 				
@@ -60,18 +60,18 @@ public void actionPerformed(ActionEvent e) {
 						String nidF=x.nextLine();
 						
 						String addressF=x.nextLine();
-						//JOptionPane.showMessageDialog(null, "Address readen");
+
 						String phoneF=x.nextLine();
-						//JOptionPane.showMessageDialog(null, "Phone readen");
+
 						String room=x.nextLine();
 						
 						
-						//JOptionPane.showMessageDialog(null, "room readen");
+
 						String daysToRentF=x.nextLine();
-						//JOptionPane.showMessageDialog(null, "days readen");
+
 						String costF=x.nextLine();
 						
-						//JOptionPane.showMessageDialog(null, "all data readen");
+
 						if(room.equals(roomF))
 							
 						{
@@ -82,24 +82,16 @@ public void actionPerformed(ActionEvent e) {
 						
 						
 						
-						//JOptionPane.showMessageDialog(null, nameF);
 						
-						//Person temp = new Person(nameF,nidF,addressF,phoneF,room,daysToRent,tottalCost);
-						//persons[i] = temp;
-						//data[index] = temp;
-						//index++;
-						//for( i = 0; i < data.length; i++){
-							//if(data[i] != null){ // object is not null
-								//JOptionPane.showMessageDialog(null, data[i]);
 							}
 							
 						}
 						
-					//}
+				
 					
-				//}
+				
 			}catch (Exception e1) {
-				//System.out.println(e1.getMessage());
+
 				JOptionPane.showMessageDialog(null, e1.getMessage());
 			}
 			
@@ -110,8 +102,8 @@ public void actionPerformed(ActionEvent e) {
 			
 			
 			getFrame().setVisible(true);
-			JOptionPane.showMessageDialog(null, "Mr X booked this room for 3 days \nHis Phone:\nHis Address");
-			//new Menu();
+			//JOptionPane.showMessageDialog(null, "Mr X booked this room for 3 days \nHis Phone:\nHis Address");
+
 		}
 		else if(e.getSource()==getBack())
 		{
