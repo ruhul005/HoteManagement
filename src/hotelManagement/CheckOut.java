@@ -13,12 +13,8 @@ public class CheckOut extends Frame implements ActionListener{
 	
 		
 		private JLabel messageL;
-		
-	
-	public CheckOut(){
-	
+		public CheckOut(){
 		messageL=new JLabel("Which room to checkout?");
-		
 		GridLayout g = new GridLayout(5,2);
 		getFrame().setLayout(g);
 		
@@ -38,13 +34,8 @@ public class CheckOut extends Frame implements ActionListener{
 			try {
 				File fr = new File("data.txt");
 				Scanner x = new Scanner(fr);
-			
 				String roomF = getRoom().getSelectedItem().toString();
-				
-				
-				Person [] persons = new Person[20];
-				
-				
+				//Person [] persons = new Person[20];
 				
 				String[] nameF= new String[10];
 				String[] nidF= new String[10];
@@ -55,7 +46,7 @@ public class CheckOut extends Frame implements ActionListener{
 				String[] costF= new String[10];
 		while(x.hasNextLine()==true)
 				{
-					for(int i=0;i<10;i++)
+					for(int i=0;i<1;i++)
 					{
 						 nameF[i]=x.nextLine();
 
@@ -74,17 +65,18 @@ public class CheckOut extends Frame implements ActionListener{
 							//JOptionPane.showMessageDialog(null, "data readen \n Name:"+nameF[i]+"\nNID:"+nidF[i]+
 									//"\nAddress:"+addressF[i]+"\nPhone:"+phoneF[i]+"\nRoom No:"+room[i]+"\n Rented for"+daysTorentF[i]+"days");
 						//}			
-							if(x.hasNextLine()==false) {
+							while(x.hasNextLine()==false) {
 								FileWriter fw = new FileWriter("data.txt",false );
-								for ( i=0;i<10;i++)
+								for ( i=0;nameF[i]!=null;i++)
 								{
 									
 									
-									if(roomF.equals(room)) {
+									if(room[i].equals(roomF)) {
 										JOptionPane.showMessageDialog(null, "Skipped");
-										continue;}
+										continue;
+										}
 									
-									fw.write(nameF+"\n");
+									//fw.write(nameF+"\n");
 									fw.write(nameF[i]+"\n");
 									JOptionPane.showMessageDialog(null, "name written");
 									fw.write(nidF[i]+"\n");
@@ -93,6 +85,7 @@ public class CheckOut extends Frame implements ActionListener{
 									fw.write(room[i]+"\n");
 									fw.write(daysTorentF[i]+"\n");
 									fw.write(costF[i]+"\n");
+									
 									JOptionPane.showMessageDialog(null, "data Written Again");
 									JOptionPane.showMessageDialog(null, "data Written \n Name:"+nameF[i]+"\nNID:"+nidF[i]+
 											"\nAddress:"+addressF[i]+"\nPhone:"+phoneF[i]+"\nRoom No:"+room[i]+"\n Rented for"+daysTorentF[i]+"days");
