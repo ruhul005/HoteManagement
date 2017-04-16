@@ -53,12 +53,7 @@ public class CheckOut extends Frame implements ActionListener{
 				String[] room= new String[10];
 				String[] daysTorentF= new String[10];
 				String[] costF= new String[10];
-				
-				
-				
-				
-				
-				while(x.hasNextLine()==true)
+		while(x.hasNextLine()==true)
 				{
 					for(int i=0;i<persons.length;i++)
 					{
@@ -71,50 +66,45 @@ public class CheckOut extends Frame implements ActionListener{
 						daysTorentF[i]=x.nextLine();
 						costF[i]=x.nextLine();
 						
-						//if(room.equals(roomF))
+						if(i==2)
+							JOptionPane.showMessageDialog(null, "data Readen i=2");
 							
 						//{
 							JOptionPane.showMessageDialog(null, "data Readen");
 							//JOptionPane.showMessageDialog(null, "data readen \n Name:"+nameF[i]+"\nNID:"+nidF[i]+
 									//"\nAddress:"+addressF[i]+"\nPhone:"+phoneF[i]+"\nRoom No:"+room[i]+"\n Rented for"+daysTorentF[i]+"days");
 						//}
-							while(x.hasNextLine()==false) {
-								for (int j=0;j<persons.length;j++)
-								{
-									FileWriter fw = new FileWriter("data.txt",false );
-									
-									if(roomF.equals(room)) {
-										continue;}
-									
-									
-									fw.write(nameF[j]);
-									JOptionPane.showMessageDialog(null, "name written");
-									fw.write(nidF[j]);
-									fw.write(addressF[j]);
-									fw.write(phoneF[j]);
-									fw.write(room[j]);
-									fw.write(daysTorentF[j]);
-									fw.write(costF[j]);
-									JOptionPane.showMessageDialog(null, "data Written Again");
-									JOptionPane.showMessageDialog(null, "data readen \n Name:"+nameF[j]+"\nNID:"+nidF[j]+
-											"\nAddress:"+addressF[j]+"\nPhone:"+phoneF[j]+"\nRoom No:"+room[j]+"\n Rented for"+daysTorentF[j]+"days");
-								
 							
-						}
-								}
+								
 				}
-					JOptionPane.showMessageDialog(null,"Centers block of two for");
+
+					for (int i=0;i<persons.length;i++)
+					{
+						FileWriter fw = new FileWriter("data.txt",false );
+						
+						if(roomF.equals(room)) {
+							continue;}
+						
+						
+						fw.write(nameF[i]+"\n");
+						JOptionPane.showMessageDialog(null, "name written");
+						fw.write(nidF[i]+"\n");
+						fw.write(addressF[i]+"\n");
+						fw.write(phoneF[i]+"\n");
+						fw.write(room[i]+"\n");
+						fw.write(daysTorentF[i]+"\n");
+						fw.write(costF[i]+"\n");
+						JOptionPane.showMessageDialog(null, "data Written Again");
+						JOptionPane.showMessageDialog(null, "data readen \n Name:"+nameF[i]+"\nNID:"+nidF[i]+
+								"\nAddress:"+addressF[i]+"\nPhone:"+phoneF[i]+"\nRoom No:"+room[i]+"\n Rented for"+daysTorentF[i]+"days");
+						
+				
+			}
 					
-				
-				
-				
 				}
-				
-				
 				}catch (Exception e1) {
 				//System.out.println(e1.getMessage());
 				JOptionPane.showMessageDialog(null,e1.getMessage());
-				
 				
 			}
 			// remove or delete user data from file by room no. and get his bill info 
