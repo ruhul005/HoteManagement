@@ -34,7 +34,7 @@ public class Frame implements ActionListener{
 		frame.setSize(640, 250);
 		frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		frame.setVisible(true);
-		frame.setTitle("আশিক রুহুল আবাসিক হোটেল");
+		frame.setTitle("Hotel Management System");
 		
 		
 		

@@ -45,7 +45,7 @@ public class Menu extends Frame implements ActionListener {
 		//getFrame().setSize(640, 250);
 		//getFrame().setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 		getFrame().setVisible(true);
-		//getFrame().setTitle("আশিক রুহুল আবাসিক হোটেল");
+		//getFrame().setTitle("");
 		
 		
 		
