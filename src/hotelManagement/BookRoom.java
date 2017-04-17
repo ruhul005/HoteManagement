@@ -90,7 +90,7 @@ public void actionPerformed(ActionEvent e) {
 				//fw.write("Customer Detail \n");
 				
 				
-				JOptionPane.showMessageDialog(null, "data Added\n Name:"+nameF+"\nNID:"+nidF+
+				JOptionPane.showMessageDialog(null, "Data Added\n\n Name:"+nameF+"\nNID:"+nidF+
 						"\nAddress:"+addressF+"\nPhone:"+phoneF+"\nRoom No:"+roomF+"\n Rented for"+daysToRentF+"days");
 				
 				

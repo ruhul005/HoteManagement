@@ -75,9 +75,9 @@ public void actionPerformed(ActionEvent e) {
 						if(room.equals(roomF))
 							
 						{
-							JOptionPane.showMessageDialog(null, "in IF condition");
-							JOptionPane.showMessageDialog(null, "data readen \n Name:"+nameF+"\nNID:"+nidF+
-									"\nAddress:"+addressF+"\nPhone:"+phoneF+"\nRoom No:"+roomF+"\n Rented for"+daysToRentF+"days");
+							//JOptionPane.showMessageDialog(null, "in IF condition");
+							JOptionPane.showMessageDialog(null, "Data Readen \n\n Name:"+nameF+"\nNID:"+nidF+
+									"\nAddress:"+addressF+"\nPhone:"+phoneF+"\nRoom No:"+roomF+"\n Rented for "+daysToRentF+"days");
 						}
 						
 							}

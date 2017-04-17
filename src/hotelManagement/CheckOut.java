@@ -30,8 +30,51 @@ public class CheckOut extends Frame implements ActionListener{
 	public void actionPerformed(ActionEvent e) {
 		
 		if(e.getSource()==getSubmit())
-		{
+		{		
 			try {
+				File fr = new File("data.txt");
+				Scanner x = new Scanner(fr);
+
+				
+
+				Scanner s = new Scanner(System.in);
+				
+				
+				String roomF = getRoom().getSelectedItem().toString();
+				
+				while(x.hasNextLine()){
+					
+					
+					
+					for(int i=0; i <1 ;i++)
+					{	
+						
+						String nameF=x.nextLine();
+						String nidF=x.nextLine();
+						String addressF=x.nextLine();
+						String phoneF=x.nextLine();
+						String room=x.nextLine();
+						String daysToRentF=x.nextLine();
+						String costF=x.nextLine();
+						
+
+						if(room.equals(roomF))
+							
+						{
+							//JOptionPane.showMessageDialog(null, "in IF condition");
+							JOptionPane.showMessageDialog(null, "Checkout Successfully \n\n "+nameF+" have to pay "+costF+" Taka");
+						}
+						
+						
+							}
+							
+						}
+					}catch (Exception e1) {
+
+				JOptionPane.showMessageDialog(null, e1.getMessage());
+			}
+
+			/*try {
 				File fr = new File("data.txt");
 				Scanner x = new Scanner(fr);
 				String roomF = getRoom().getSelectedItem().toString();
@@ -66,10 +109,11 @@ public class CheckOut extends Frame implements ActionListener{
 									//"\nAddress:"+addressF[i]+"\nPhone:"+phoneF[i]+"\nRoom No:"+room[i]+"\n Rented for"+daysTorentF[i]+"days");
 						//}			
 							while(x.hasNextLine()==false) {
-								FileWriter fw = new FileWriter("data.txt",false );
-								for ( i=0;nameF[i]!=null;i++)
+								FileWriter fw = new FileWriter("data.txt" );
+								for ( i=0;i<4;i++)
 								{
-									
+									if(nameF[i]==null)
+										continue;
 									
 									if(room[i].equals(roomF)) {
 										JOptionPane.showMessageDialog(null, "Skipped");
@@ -109,11 +153,11 @@ public class CheckOut extends Frame implements ActionListener{
 				//System.out.println(e1.getMessage());
 				JOptionPane.showMessageDialog(null,e1.getMessage());
 				
-			}
+			}*/
 			// remove or delete user data from file by room no. and get his bill info 
 			//bill will be 500/- per day. if he stay 6 day bill will be 3000/-
 			getFrame().setVisible(false);
-			JOptionPane.showMessageDialog(null, "CheckOut SuccessFull , X have to Pay 3000/-");
+			//JOptionPane.showMessageDialog(null, "CheckOut SuccessFull , X have to Pay 3000/-");
 			new Menu();
 			
 		}
